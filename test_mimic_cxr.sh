@@ -1,0 +1,21 @@
+python test.py \
+ --image_dir data/mimic_cxr/images/ \
+ --ann_path data/mimic_cxr/annotation.json \
+ --dataset_name mimic_cxr \
+ --max_seq_length 100 \
+ --threshold 10 \
+ --batch_size 16 \
+ --epochs 30 \
+ --save_dir results/mimic_cxr \
+ --step_size 3 \
+ --gamma 0.8 \
+ --log_period 1000 \
+ --seed 9153 \
+ --lr_ve 1e-4 \
+ --lr_ed 5e-4 \
+ --cmm_size 2048 \
+ --cmm_dim 512 \
+ --beam_size 3 \
+ --topk 32 \
+ --num_layers 3 \
+ --load model_best.pth
